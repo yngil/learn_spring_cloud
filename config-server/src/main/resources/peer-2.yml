@@ -1,10 +1,13 @@
 eureka:
   instance:
-    hostname: config-server
+    hostname: config-server-2
   client:
-    fetch-registry: false
-    register-with-eureka: false
+    fetch-registry: true
+    register-with-eureka: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://config-server-1:8761/eureka/,http://config-server-3:8763/eureka/
 server:
   port: 8761
+spring:
+  application:
+    name: config-server
