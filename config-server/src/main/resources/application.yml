@@ -8,3 +8,12 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 server:
   port: 8761
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:yngil/learn_spring_cloud.git
+          username: spawnyngil@gmail.com
+          password: yngil1009
+          search-paths: '{application}'
