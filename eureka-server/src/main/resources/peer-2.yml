@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: config-server-2
+    hostname: eureka-server-2
   client:
     fetch-registry: true
     register-with-eureka: true
@@ -10,4 +10,4 @@ server:
   port: 8761
 spring:
   application:
-    name: config-server
+    name: eureka-server
