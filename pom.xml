@@ -6,6 +6,10 @@
     <modules>
         <module>config-server</module>
         <module>config-client</module>
+        <module>products</module>
+        <module>storages</module>
+        <module>orders</module>
+        <module>users</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -30,7 +34,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-deppendencies</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
 <!--                <type>pom</type>-->
 <!--                <scope>import</scope>-->
@@ -45,13 +49,13 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>

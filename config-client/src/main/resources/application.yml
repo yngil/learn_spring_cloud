@@ -1,8 +1,12 @@
 server:
-  port: 8765
-spring:
+  port: 8766
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
   application:
     name: config-client
-  cloud:
-    config:
-      uri: https://github.com/yngil/learn_spring_cloud.git
+management:
+  endpoint:
+    env:
+      enabled: true

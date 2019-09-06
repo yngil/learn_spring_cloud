@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8764
+  application:
+    name: config-client
+management:
+  endpoint:
+    env:
+      enabled: true

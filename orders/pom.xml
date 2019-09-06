@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.study.cloud</groupId>
+		<artifactId>study-spring-cloud</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<artifactId>orders</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>orders-api</module>
+		<module>orders-common</module>
+		<module>orders-service</module>
+	</modules>
+
+	<properties>
+		<products.common.version>0.0.1</products.common.version>
+		<orders.common.version>0.0.1</orders.common.version>
+		<products.api.version>0.0.1</products.api.version>
+		<storages.api.version>0.0.1</storages.api.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.study.cloud</groupId>
+				<artifactId>orders-common</artifactId>
+				<version>${orders.common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.study.cloud</groupId>
+				<artifactId>products-common</artifactId>
+				<version>${products.common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.study.cloud</groupId>
+				<artifactId>products-api</artifactId>
+				<version>${products.api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.study.cloud</groupId>
+				<artifactId>storages-api</artifactId>
+				<version>${storages.api.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

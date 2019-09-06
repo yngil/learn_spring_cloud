@@ -4,3 +4,15 @@ spring:
   cloud:
     config:
       uri: ${CONFIG_SERVER_URL:http://localhost:8888}
+      server:
+        git:
+          uri: https://github.com/yngil/config-repo
+          username: spawnyngil@gmail.com
+          password: yngil1009
+          force-pull: true
+          basedir: target/config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env
